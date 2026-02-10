@@ -1,55 +1,85 @@
 # Customer Churn Prediction
 
-## 📌 Problem Statement
-Predict whether a customer will churn based on demographic, contract, and billing information.
+## 🚀 Project Overview
+This project explores customer churn prediction using the Telco Customer Churn dataset.  
+The goal is to build machine learning models to predict which customers are likely to leave (churn) based on their account and service usage.
+
+---
 
 ## 📊 Dataset
-Telco Customer Churn dataset  
-Features include tenure, monthly charges, contract type, payment method, etc.
+The dataset contains 7043 customer records and 20 feature columns including:
+- Demographics (gender, senior citizen, etc.)
+- Service usage (Internet, Phone, Tech support, etc.)
+- Billing information (MonthlyCharges, TotalCharges, etc.)
+- Target column: **Churn**
 
-## 🛠️ Approach
-- Data cleaning and preprocessing using pipelines
-- Handling missing values with imputation
-- Encoding categorical variables using OneHotEncoder
-- Scaling numeric features using StandardScaler
-- Addressed class imbalance
-- Built and compared multiple models
+---
+
+## 🧹 Data Preprocessing
+- Identified and handled missing values
+- Converted TotalCharges to numeric
+- Encoded categorical features using OneHotEncoder
+- Scaled numeric features using StandardScaler
+- Used `stratify=y` during train/test split to maintain churn ratio
+
+---
 
 ## 🤖 Models Used
-- Logistic Regression (Baseline & Final Model)
-- Random Forest
-- XGBoost
 
-## 📈 Evaluation Metrics
-- Accuracy
-- Precision
-- Recall (Churn)
-- F1-score
-- Confusion Matrix
-- ROC Curve
+| Model | Accuracy | Recall (Churn) | F1 Score |
+|--------|----------|----------------|----------|
+| Logistic Regression | 0.806 | **0.56** | 0.60 |
+| Random Forest | 0.784 | 0.48 | 0.54 |
+| XGBoost | 0.798 | 0.52 | 0.58 |
 
-## 🏆 Results
-Logistic Regression achieved the best recall and F1-score for churn, making it the most suitable model for customer retention.
+✔ Since recall for class 1 (churn) is most important, **Logistic Regression** was chosen as the final model.
 
-## 📌 Key Insights
-- Customers with month-to-month contracts churn more
-- High monthly charges increase churn probability
-- Longer tenure reduces churn risk
+---
+
+## 📌 Evaluation Metrics
+- **Accuracy:** Overall correctness
+- **Recall (Churn):** Ability to correctly identify churners
+- **F1 Score:** Balance between precision and recall
+
+---
+
+## 📊 Visualizations
+
+### Churn Distribution
+![Churn Distribution](images/churn_distribution.png)
+
+---
+
+### Confusion Matrix — Logistic Regression
+![Confusion Matrix — Logistic Regression](images/confusion_matrix_logistic.png)
+
+---
+
+### ROC Curve — Logistic Regression
+![ROC Curve](images/roc_curve_logistic.png)
+
+---
+
+### Model Comparison — Recall
+![Model Comparison – Recall](images/model_comparison_recall.png)
+
+---
 
 ## 📂 Project Structure
 churn-prediction-ml/
 ├── data/
+│ └── telco_churn.csv
 ├── notebooks/
+│ └── churn_analysis.ipynb
+├── images/
 ├── requirements.txt
 └── README.md
 
+---
 
-## 🚀 How to Run
-1. Clone the repository
-2. Install dependencies using `pip install -r requirements.txt`
-3. Run the notebook in `notebooks/`
+## 🛠 Installation & Usage
 
-## Confusion Matrix
-
-![Confusion Matrix](images/confusion_matrix.png)
-
+```bash
+git clone https://github.com/1998-aish/churn-prediction-ml
+cd churn-prediction-ml
+pip install -r requirements.txt
