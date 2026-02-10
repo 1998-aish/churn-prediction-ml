@@ -81,3 +81,10 @@ churn-prediction-ml/
 git clone https://github.com/1998-aish/churn-prediction-ml
 cd churn-prediction-ml
 pip install -r requirements.txt
+
+---
+
+## 👨‍💻 Author
+
+**Aish**  
+Data Science Enthusiast 
