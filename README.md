@@ -37,4 +37,19 @@ Logistic Regression achieved the best recall and F1-score for churn, making it t
 - Longer tenure reduces churn risk
 
 ## 📂 Project Structure
+churn-prediction-ml/
+├── data/
+├── notebooks/
+├── requirements.txt
+└── README.md
+
+
+## 🚀 How to Run
+1. Clone the repository
+2. Install dependencies using `pip install -r requirements.txt`
+3. Run the notebook in `notebooks/`
+
+## Confusion Matrix
+
+![Confusion Matrix](images/confusion_matrix.png)
 
