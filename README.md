@@ -66,7 +66,8 @@ The dataset contains 7043 customer records and 20 feature columns including:
 ---
 
 ## 📂 Project Structure
-churn-prediction-ml/
+churn-prediction
+-ml/
 ├── data/
 │ └── telco_churn.csv
 ├── notebooks/
