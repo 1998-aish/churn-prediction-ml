@@ -51,7 +51,7 @@ The dataset contains 7043 customer records and 20 feature columns including:
 ---
 
 ### Confusion Matrix — Logistic Regression
-![Confusion Matrix — Logistic Regression](images/confusion_matrix_logistic.png)
+![Confusion Matrix](images/confusion_matrix.png)
 
 ---
 
@@ -66,13 +66,10 @@ The dataset contains 7043 customer records and 20 feature columns including:
 ---
 
 ## 📂 Project Structure
-churn-prediction
--ml/
+churn-prediction-ml/
 ├── data/
-│ └── telco_churn.csv
 ├── notebooks/
-│ └── churn_analysis.ipynb
-├── images/
+|__ images/
 ├── requirements.txt
 └── README.md
 
