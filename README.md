@@ -1,8 +1,9 @@
 # Customer Churn Prediction
 
 ## 🚀 Project Overview
-This project explores customer churn prediction using the Telco Customer Churn dataset.  
-The goal is to build machine learning models to predict which customers are likely to leave (churn) based on their account and service usage.
+Losing customers is expensive for subscription businesses — it usually costs far more to win a new customer than to keep an existing one. This project builds machine learning models on the Telco Customer Churn dataset to **flag customers likely to leave**, so a retention team can reach out before they do.
+
+Because missing a churner costs more than a false alarm, models are compared on **recall for the churn class**, not just accuracy.
 
 ---
 
@@ -66,25 +67,36 @@ The dataset contains 7043 customer records and 20 feature columns including:
 ---
 
 ## 📂 Project Structure
+```
 churn-prediction-ml/
 ├── data/
+│   └── Telco_churn.csv          # Telco Customer Churn dataset
 ├── notebooks/
-|__ images/
+│   └── churn_analysis.ipynb     # EDA, preprocessing, modeling, evaluation
+├── images/                      # charts used in this README
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
 ## 🛠 Installation & Usage
-
 ```bash
-git clone https://github.com/1998-aish/churn-prediction-ml
+git clone https://github.com/1998-aish/churn-prediction-ml.git
 cd churn-prediction-ml
 pip install -r requirements.txt
+jupyter notebook notebooks/churn_analysis.ipynb
+```
 
 ---
 
-## 👨‍💻 Author
+## 🔭 Next steps
+- Tune the decision threshold and use class weighting to raise churn recall further
+- Add SHAP explanations to show which factors drive churn for each customer
+- Serve the model through a simple Streamlit app for interactive predictions
 
-**Aish**  
-Data Science Enthusiast 
+---
+
+## 👩‍💻 Author
+**Aishwarya Srivastava** — M.S. Data Science & Analytics, Arizona State University
+[LinkedIn](https://www.linkedin.com/in/aish-sv123) · [GitHub](https://github.com/1998-aish)
