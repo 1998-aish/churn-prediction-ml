@@ -1,0 +1,81 @@
+{
+  "baseline_logistic_regression": {
+    "threshold": 0.5,
+    "accuracy": 0.806,
+    "precision": 0.657,
+    "recall": 0.559,
+    "f1": 0.604,
+    "roc_auc": 0.842
+  },
+  "tuned_logistic_regression": {
+    "threshold": 0.486,
+    "accuracy": 0.739,
+    "precision": 0.505,
+    "recall": 0.789,
+    "f1": 0.616,
+    "roc_auc": 0.838
+  },
+  "best_params": {
+    "C": 0.01,
+    "class_weight": "balanced"
+  },
+  "cv_roc_auc": 0.844,
+  "lift": [
+    {
+      "top_pct_contacted": 10,
+      "pct_of_churners_captured": 27.8,
+      "lift": 2.78
+    },
+    {
+      "top_pct_contacted": 20,
+      "pct_of_churners_captured": 50.0,
+      "lift": 2.5
+    },
+    {
+      "top_pct_contacted": 30,
+      "pct_of_churners_captured": 65.8,
+      "lift": 2.19
+    },
+    {
+      "top_pct_contacted": 40,
+      "pct_of_churners_captured": 77.0,
+      "lift": 1.93
+    },
+    {
+      "top_pct_contacted": 50,
+      "pct_of_churners_captured": 86.6,
+      "lift": 1.73
+    }
+  ],
+  "top_features": {
+    "tenure": 0.0667,
+    "Contract": 0.0228,
+    "InternetService": 0.0061,
+    "MonthlyCharges": 0.005,
+    "OnlineSecurity": 0.0044
+  },
+  "churn_rates_pct": {
+    "Contract": {
+      "Month-to-month": 42.7,
+      "One year": 11.3,
+      "Two year": 2.8
+    },
+    "tenure_band": {
+      "0\u201312 mo": 47.4,
+      "13\u201324 mo": 28.7,
+      "25\u201348 mo": 20.4,
+      "49\u201372 mo": 9.5
+    },
+    "InternetService": {
+      "DSL": 19.0,
+      "Fiber optic": 41.9,
+      "No": 7.4
+    },
+    "PaymentMethod": {
+      "Bank transfer (automatic)": 16.7,
+      "Credit card (automatic)": 15.2,
+      "Electronic check": 45.3,
+      "Mailed check": 19.1
+    }
+  }
+}

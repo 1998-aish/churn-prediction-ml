@@ -1,7 +1,15 @@
-pandas
-numpy
-scikit-learn
-matplotlib
+# Core (pinned so the saved model in models/ loads correctly)
+scikit-learn==1.9.1
+pandas>=2.2
+numpy>=2.0
+joblib>=1.4
+matplotlib>=3.8
+
+# Demo app
+streamlit>=1.40
+
+# Notebook and tests
 seaborn
 xgboost
 jupyter
+pytest
